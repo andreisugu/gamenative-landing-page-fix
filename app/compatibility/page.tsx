@@ -154,7 +154,7 @@ export default function CompatibilityPage() {
     const desiredLooseSet = new Set(requestedModels.map((m) => normalizeLooseText(m)))
 
     const prefix = getAssetPrefix()
-    const csvUrl = `${prefix}/supported_devices.csv`
+    const csvUrl = `https://gamenative.app/supported_devices.csv`
 
     const ab = await fetch(csvUrl).then((r) => r.arrayBuffer())
     const csvText = decodeCsvBuffer(new Uint8Array(ab))
